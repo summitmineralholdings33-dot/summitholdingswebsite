@@ -1,81 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" href="favicon.png" type="image/png"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Summit Mineral Holdings - Africa's Trusted Mineral Partner</title>
 <meta name="description" content="Responsible gold sourcing and mining operations across DR Congo and Karamoja, Uganda - refined, certified, and exported to the world.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Manrope:wght@300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
-<!-- ════ GOLD TICKER ════ -->
-<div id="ticker" aria-label="Indicative precious metals prices"><div id="tape"></div></div>
-
-<!-- ════ NAVBAR ════ -->
-<header id="nav">
-  <div class="wrap bar">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="Summit Mineral Holdings" style="height:70px;width:auto;display:block">
-      <span style="line-height:1.15"><span class="disp" style="font-size:14px;display:block">Summit Mineral</span><span class="tape soft" style="font-size:8.5px">HOLDINGS LTD · EST. KAMPALA</span></span>
-    </a>
-    <nav class="links" aria-label="Primary">
-      <a href="about.html">About</a>
-      <button id="megabtn" aria-expanded="false">Products ▾</button>
-      <a href="investors.html">Investors & Partners</a>
-      <a href="global.html">Global Reach</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div style="display:flex;gap:10px;align-items:center">
-      <a href="contact.html" class="btn-gold btn-sm navcta">Purchase Gold</a>
-      <button class="iconbtn hide-d" id="burger" aria-label="Open menu">☰</button>
-    </div>
-  </div>
-  <div id="mega"><div class="wrap grid">
-    <div><p class="eyebrow" style="margin-bottom:16px">Products</p>
-      <a href="products.html"><span class="t">Gold Doré Bars</span><span class="tape soft" style="display:block;font-size:9px;margin-top:2px">85-96% AU</span></a>
-      <a href="products.html"><span class="t">Alluvial Gold Nuggets</span><span class="tape soft" style="display:block;font-size:9px;margin-top:2px">88-94% AU</span></a>
-      <a href="products.html"><span class="t">Refined Gold</span><span class="tape soft" style="display:block;font-size:9px;margin-top:2px">99.5-99.99% AU</span></a>
-      <a href="products.html"><span class="t">Precious Minerals</span><span class="tape soft" style="display:block;font-size:9px;margin-top:2px">3T CONCENTRATES</span></a>
-    </div>
-    <div><p class="eyebrow" style="margin-bottom:16px">Operations</p>
-      <a href="operations.html"><span class="t">DRC Operations</span><span class="soft" style="display:block;font-size:12px;margin-top:2px">3 buying centres · ICGLR certified</span></a>
-      <a href="operations.html"><span class="t">Karamoja Operations</span><span class="soft" style="display:block;font-size:12px;margin-top:2px">612 km² under licence</span></a>
-      <a href="global.html" style="color:var(--goldb);font-size:13px">Global reach →</a>
-    </div>
-    <div class="glass" style="border-radius:18px;padding:24px">
-      <p class="eyebrow" style="margin-bottom:10px">Trade desk</p>
-      <p class="soft" style="font-size:13.5px;margin-bottom:16px">Allocation enquiries answered within one business day.</p>
-      <a href="contact.html" class="btn-gold btn-sm">Request consultation</a>
-    </div>
-  </div></div>
-</header>
-
-<!-- mobile drawer -->
-<div id="drawer">
-  <div class="wrap" style="height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)">
-    <span class="disp">Summit Mineral Holdings</span>
-    <button class="iconbtn" id="closeDrawer" aria-label="Close menu">✕</button>
-  </div>
-  <nav aria-label="Mobile">
-    <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a>
-    <a href="investors.html">Investors & Partners</a><a href="global.html">Global Reach</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</div>
-
-<main id="app">
 <style>
 :root{
   --bg:#f3efe6;--bg2:#ece6d8;--ink:#0b1b30;--soft:rgba(11,27,48,.66);--line:rgba(11,27,48,.14);
   --glass:rgba(255,255,255,.55);--gline:rgba(11,27,48,.1);--gold:#9a7a2e;--goldb:#c9a24b;
 }
-@media(prefers-color-scheme:dark){:root{
-  --bg:#06101e;--bg2:#0b1b30;--ink:#eef2f7;--soft:rgba(238,242,247,.62);--line:rgba(232,201,122,.16);
-  --glass:rgba(13,30,51,.55);--gline:rgba(232,201,122,.18);--gold:#c9a24b;--goldb:#e8c97a;
-}}
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#06101e;--bg2:#0b1b30;--ink:#eef2f7;--soft:rgba(238,242,247,.62);--line:rgba(232,201,122,.16);
+    --glass:rgba(13,30,51,.55);--gline:rgba(232,201,122,.18);--gold:#c9a24b;--goldb:#e8c97a;
+  }
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased;transition:background .45s,color .45s;overflow-x:hidden}
@@ -94,6 +37,8 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .btn-ghost{display:inline-block;border:1px solid var(--gline);border-radius:99px;padding:15px 32px;font-size:13px;letter-spacing:.03em;backdrop-filter:blur(8px);transition:.3s;cursor:pointer;background:none;color:var(--ink)}
 .btn-ghost:hover{border-color:var(--goldb);background:rgba(201,162,75,.08)}
 .btn-sm{padding:10px 20px;font-size:12px}
+/* SPA page visibility */
+.page{display:none}.page.active{display:block}
 /* ticker */
 #ticker{position:fixed;top:0;left:0;right:0;z-index:60;height:32px;overflow:hidden;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px)}
 #tape{display:flex;width:max-content;height:32px;align-items:center;animation:tape 36s linear infinite}
@@ -113,7 +58,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 .iconbtn:hover{border-color:var(--goldb)}
 #mega{display:none;border-top:1px solid var(--line)}
 #mega.open{display:block;background:var(--glass);backdrop-filter:blur(18px)}
-#mega .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;padding:34px 0}
+#mega .grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:34px 0}
 #mega a{display:block;margin-bottom:14px}
 #mega .t{font-family:'Fraunces',serif;font-size:17px;transition:.25s}
 #mega a:hover .t{color:var(--goldb)}
@@ -121,8 +66,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 #drawer.open{display:flex}
 #drawer nav{padding:34px 22px;display:flex;flex-direction:column;gap:20px}
 #drawer nav a{font-family:'Fraunces',serif;font-size:26px}
-/* pages */
-.page{display:none}.page.active{display:block}
+/* page hero */
 .phero{padding:170px 0 70px;position:relative}
 .phero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 420px at 80% -10%,rgba(201,162,75,.16),transparent 60%),radial-gradient(700px 380px at 8% 10%,rgba(19,41,68,.5),transparent 65%)}
 .phero h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.03;max-width:820px}
@@ -139,13 +83,13 @@ section.blk{padding-top:96px}
 .rule{border-top:1px solid var(--line);padding-top:26px}
 .rev{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.21,.6,.35,1),transform .7s cubic-bezier(.21,.6,.35,1)}
 .rev.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}#tape{animation:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}#tape{animation:none}html{scroll-behavior:auto}}
 /* hero */
 #hero{height:100svh;min-height:620px;display:flex;align-items:flex-end;position:relative;overflow:hidden}
 #hero .bg{position:absolute;inset:0;z-index:-1;background:
- linear-gradient(180deg,rgba(6,16,30,.5) 0%,rgba(6,16,30,.2) 40%,rgba(6,16,30,.93) 100%),
- radial-gradient(1100px 600px at 75% 20%,rgba(201,162,75,.25),transparent 60%),
- radial-gradient(800px 500px at 20% 80%,rgba(154,122,46,.14),transparent 60%),#0b1b30}
+  linear-gradient(180deg,rgba(6,16,30,.5) 0%,rgba(6,16,30,.2) 40%,rgba(6,16,30,.93) 100%),
+  radial-gradient(1100px 600px at 75% 20%,rgba(201,162,75,.25),transparent 60%),
+  radial-gradient(800px 500px at 20% 80%,rgba(154,122,46,.14),transparent 60%),#0b1b30}
 #hero .bg::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(232,201,122,.12) 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(700px 500px at 70% 30%,#000,transparent)}
 #hero h1{font-size:clamp(2.9rem,9vw,6.6rem);line-height:.98;color:#f3efe6;max-width:900px}
 #hero h1 span{display:inline-block;margin-right:.26em;opacity:0;transform:translateY(40px);animation:rise .9s cubic-bezier(.21,.6,.35,1) forwards}
@@ -154,6 +98,7 @@ section.blk{padding-top:96px}
 #hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px;opacity:0;animation:fade .7s 1.15s forwards}
 #hero .coords{position:absolute;bottom:26px;right:30px;color:rgba(243,239,230,.45);opacity:0;animation:fade 1s 1.8s forwards}
 @keyframes fade{to{opacity:1}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 #hero .ghost-lite{color:#f3efe6}
 /* stats */
 #stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -170,11 +115,14 @@ section.blk{padding-top:96px}
 /* products */
 .prod{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-bottom:80px;scroll-margin-top:130px}
 .gal{display:grid;grid-template-rows:2fr 1fr;gap:14px}
-.gmain{border-radius:26px;border:1px solid var(--line);min-height:240px;display:grid;place-items:center;position:relative;background:radial-gradient(420px 240px at 50% 65%,rgba(232,201,122,.28),rgba(11,27,48,.35)),var(--bg2)}
+.gmain{border-radius:26px;border:1px solid var(--line);min-height:240px;overflow:hidden;position:relative;background:var(--bg2)}
 .gthumbs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
-.gthumbs div{border-radius:18px;border:1px solid var(--line);display:grid;place-items:center;min-height:84px;background:radial-gradient(140px 80px at 50% 60%,rgba(201,162,75,.16),transparent),var(--bg2)}
+.gthumbs div{border-radius:18px;border:1px solid var(--line);min-height:84px;overflow:hidden;position:relative;background:var(--bg2)}
 .spec dl{border-top:1px solid var(--line)}
 .spec .sr{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line)}
+/* product gallery tabs */
+.prod-tab{border-radius:26px;padding:32px;height:100%;text-align:left;width:100%;cursor:pointer;transition:border-color .2s}
+.prod-tab:hover{border-color:var(--goldb)!important}
 /* timeline */
 .tl{position:relative}
 .tl::before{content:"";position:absolute;left:7px;top:0;bottom:0;width:1px;background:var(--line)}
@@ -198,16 +146,7 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
 .frm .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 /* globe */
 #globe,#globe2{width:100%;max-width:520px;aspect-ratio:1;cursor:grab;touch-action:none;display:block;margin:0 auto}
-/* news */
-.pill{border:1px solid var(--gline);border-radius:99px;padding:9px 18px;font-size:12px;transition:.25s}
-.pill.on{background:linear-gradient(120deg,#9a7a2e,#c9a24b 45%,#e8c97a 60%,#c9a24b);color:#06101e;font-weight:700;border-color:transparent}
-/* stepper */
-.stepper{display:flex;align-items:center;gap:8px;margin-bottom:36px}
-.stepper .s{height:30px;width:30px;display:grid;place-items:center;border-radius:99px;border:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--soft);flex-shrink:0}
-.stepper .s.on{border-color:var(--goldb);color:var(--goldb)}
-.stepper .ln{flex:1;height:1px;background:var(--line)}
-.upl{display:flex;justify-content:space-between;align-items:center;gap:16px;border:1px solid var(--line);border-radius:14px;padding:16px 20px;font-size:14px;cursor:pointer;transition:.25s}
-.upl:hover{border-color:var(--goldb)}
+/* footer */
 .ftr{border-top:1px solid var(--line);margin-top:110px}
 .ftr .grid{display:grid;grid-template-columns:2fr 1fr 1.3fr;gap:44px;padding:60px 0}
 .ftr li{list-style:none;margin-bottom:10px;font-size:14px}
@@ -216,6 +155,9 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
 .ctabox{border:1px solid var(--line);border-radius:30px;padding:70px 30px;text-align:center;background:radial-gradient(700px 320px at 50% 0%,rgba(201,162,75,.18),transparent 70%),var(--bg2)}
 .ctabox h2{font-size:clamp(2rem,4.5vw,3.4rem);max-width:680px;margin:18px auto 0;line-height:1.05}
 .hide-d{display:none}
+/* whatsapp float */
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:99px;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s}
+.wa-btn:hover{transform:scale(1.1);box-shadow:0 6px 32px rgba(37,211,102,.65)}
 @media(max-width:980px){
   .grid4,#stats .grid4{grid-template-columns:1fr 1fr}
   #stats .cell{border-top:1px solid var(--line)}
@@ -232,10 +174,10 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
 </head>
 <body>
 
-<!-- ════ GOLD TICKER ════ -->
+<!-- GOLD TICKER -->
 <div id="ticker" aria-label="Indicative precious metals prices"><div id="tape"></div></div>
 
-<!-- ════ NAVBAR ════ -->
+<!-- NAVBAR -->
 <header id="nav">
   <div class="wrap bar">
     <a href="#/" class="logo">
@@ -245,13 +187,12 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
     <nav class="links" aria-label="Primary">
       <a href="#/about" data-nav="about">About</a>
       <button id="megabtn" aria-expanded="false">Products ▾</button>
-      <a href="#/investors" data-nav="investors">Investors & Partners</a>
+      <a href="#/investors" data-nav="investors">Investors &amp; Partners</a>
       <a href="#/global" data-nav="global">Global Reach</a>
       <a href="#/contact" data-nav="contact">Contact</a>
     </nav>
     <div style="display:flex;gap:10px;align-items:center">
-      
-      <a href="#/investors" class="btn-gold btn-sm navcta">Become a partner</a>
+      <a href="#/contact" class="btn-gold btn-sm navcta">Purchase Gold</a>
       <button class="iconbtn hide-d" id="burger" aria-label="Open menu">☰</button>
     </div>
   </div>
@@ -262,7 +203,6 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
       <a href="#/products"><span class="t">Refined Gold</span><span class="tape soft" style="display:block;font-size:9px;margin-top:2px">99.5-99.99% AU</span></a>
       <a href="#/products"><span class="t">Precious Minerals</span><span class="tape soft" style="display:block;font-size:9px;margin-top:2px">3T CONCENTRATES</span></a>
     </div>
-
     <div class="glass" style="border-radius:18px;padding:24px">
       <p class="eyebrow" style="margin-bottom:10px">Trade desk</p>
       <p class="soft" style="font-size:13.5px;margin-bottom:16px">Allocation enquiries answered within one business day.</p>
@@ -271,22 +211,25 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
   </div></div>
 </header>
 
-<!-- mobile drawer -->
+<!-- MOBILE DRAWER -->
 <div id="drawer">
   <div class="wrap" style="height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)">
     <span class="disp">Summit Mineral Holdings</span>
     <button class="iconbtn" id="closeDrawer" aria-label="Close menu">✕</button>
   </div>
   <nav aria-label="Mobile">
-    <a href="#/">Home</a><a href="#/about">About</a><a href="#/products">Products</a>
-    <a href="#/investors">Investors & Partners</a><a href="#/global">Global Reach</a>
-    <a href="#/contact">Contact</a><a href="#/portal">Buyer Portal</a>
+    <a href="#/">Home</a>
+    <a href="#/about">About</a>
+    <a href="#/products">Products</a>
+    <a href="#/investors">Investors &amp; Partners</a>
+    <a href="#/global">Global Reach</a>
+    <a href="#/contact">Contact</a>
   </nav>
 </div>
 
 <main id="app"></main>
 
-<!-- ════ FOOTER ════ -->
+<!-- FOOTER -->
 <footer class="ftr"><div class="wrap">
   <div class="grid">
     <div>
@@ -295,9 +238,11 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
       <p class="tape soft" style="font-size:9px;line-height:1.9">OECD DUE-DILIGENCE ALIGNED · ICGLR CERTIFIED CHAINS · LBMA RESPONSIBLE-SOURCING PRINCIPLES</p>
     </div>
     <div><p class="eyebrow" style="margin-bottom:18px">Navigate</p><ul>
-      <li><a href="#/about">About</a></li><li><a href="#/products">Products</a></li>
-      <li><a href="#/investors">Investors & Partners</a></li>
-      <li><a href="#/global">Global Reach</a></li><li><a href="#/contact">Contact</a></li>
+      <li><a href="#/about">About</a></li>
+      <li><a href="#/products">Products</a></li>
+      <li><a href="#/investors">Investors &amp; Partners</a></li>
+      <li><a href="#/global">Global Reach</a></li>
+      <li><a href="#/contact">Contact</a></li>
     </ul></div>
     <div><p class="eyebrow" style="margin-bottom:18px">Contact</p><ul class="soft">
       <li>Plot 14, Yusuf Lule Road, Nakasero, Kampala, Uganda</li>
@@ -309,6 +254,9 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
   <div class="base tape soft" style="font-size:9px"><span>© 2016-2026 SUMMIT MINERAL HOLDINGS LTD. ALL RIGHTS RESERVED.</span><span>KAMPALA · ISIRO · BUNIA · MOROTO</span></div>
 </div></footer>
 
+<!-- EmailJS CDN (third-party library) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
 /* ═══════════ DATA ═══════════ */
 const products=[
@@ -316,40 +264,110 @@ const products=[
  {id:"nuggets",name:"Alluvial Gold Nuggets",purity:"88-94% Au",desc:"Naturally occurring alluvial nuggets recovered from licensed Karamoja concessions, graded by size and purity for collectors and refiners.",avail:"Quarterly graded lots",specs:[["Gold content","88-94%"],["Lot sizes","100 g-5 kg"],["Grading","Size + purity classed"],["Provenance","GPS-logged recovery"],["Documentation","Full export pack"]]},
  {id:"refined",name:"Refined Gold",purity:"99.5-99.99% Au",desc:"Four-nines fine gold produced through accredited refinery partners, delivered as kilobars or minted bars with serial-numbered certification.",avail:"On allocation · CIF Dubai / Mumbai / HK",specs:[["Fineness","995.0-999.9"],["Formats","1 kg cast · 100 g minted"],["Certification","Serialised, assay-stamped"],["Delivery","CIF major hubs"],["Settlement","LBMA-referenced pricing"]]},
  {id:"minerals",name:"Precious Minerals",purity:"Assayed per lot",desc:"Conflict-free 3T minerals sourced through ICGLR-certified supply chains with full iTSCi/RMI traceability for industrial buyers.",avail:"By contract",specs:[["Minerals","Ta · Sn · W concentrates"],["Traceability","iTSCi tagged at pit"],["Ta₂O₅ grade","18-32%"],["Lot sizes","1-20 t"],["Compliance","RMI / CMRT ready"]]}];
+
 const ops=[
- {name:"Haut-Uélé & Ituri, DR Congo",short:"DRC Operations",x:52.2,y:55.5,body:"Sourcing partnerships with licensed cooperatives and semi-industrial producers, with sealed-assay buying centres in Isiro and Bunia and export staging through Kampala and Kigali.",facts:["3 BUYING CENTRES","ICGLR CERTIFIED","1,400+ FORMALISED MINERS"]},
- {name:"Karamoja Sub-region, Uganda",short:"Karamoja Operations",x:55.4,y:53.8,body:"Exploration and active alluvial recovery across licensed concessions in Moroto and Amudat districts, with on-site gravimetric processing and a miner-formalisation programme.",facts:["2 ACTIVE CONCESSIONS","612 KM² UNDER LICENCE","DRONE-SURVEYED QUARTERLY"]}];
+ {name:"Haut-Uélé & Ituri, DR Congo",short:"DRC Operations",body:"Sourcing partnerships with licensed cooperatives and semi-industrial producers, with sealed-assay buying centres in Isiro and Bunia and export staging through Kampala and Kigali.",facts:["3 BUYING CENTRES","ICGLR CERTIFIED","1,400+ FORMALISED MINERS"]},
+ {name:"Karamoja Sub-region, Uganda",short:"Karamoja Operations",body:"Exploration and active alluvial recovery across licensed concessions in Moroto and Amudat districts, with on-site gravimetric processing and a miner-formalisation programme.",facts:["2 ACTIVE CONCESSIONS","612 KM² UNDER LICENCE","DRONE-SURVEYED QUARTERLY"]}];
+
 const chain=[["Exploration","Geological survey, drone mapping, sampling, and resource estimation across licensed blocks."],["Mining","Alluvial and semi-industrial recovery with formalised artisanal partners under sealed supervision."],["Processing","Gravimetric concentration and on-site smelting to doré, assayed by fire assay and XRF."],["Logistics","Armoured, insured transport with GPS custody logging from site to bonded vault."],["Export","Permitted export through Entebbe and Kigali to refinery and bullion-desk partners worldwide."]];
+
 const dests=[{c:"Dubai",lat:25.2,lng:55.3},{c:"Geneva",lat:46.2,lng:6.1},{c:"Mumbai",lat:19.1,lng:72.9},{c:"Hong Kong",lat:22.3,lng:114.2},{c:"Singapore",lat:1.35,lng:103.8},{c:"Istanbul",lat:41,lng:29},{c:"London",lat:51.5,lng:-.1},{c:"Shanghai",lat:31.2,lng:121.5}];
 const hubCity={c:"Kampala",lat:.35,lng:32.6};
-const newsItems=[
- {tag:"Company update",date:"May 2026",t:"Summit expands Karamoja licence area by 240 km²",e:"New exploration licences in Amudat district extend our Karamoja footprint following strong drill results in Q1."},
- {tag:"Market analysis",date:"April 2026",t:"Gold in H2 2026: central-bank demand keeps the floor high",e:"Our trading desk's read on reserve diversification, real yields, and what it means for African doré premiums."},
- {tag:"Compliance",date:"March 2026",t:"DRC supply chain passes third consecutive ICGLR audit",e:"Independent auditors confirmed full chain-of-custody integrity across all three buying centres."},
- {tag:"Sustainability",date:"February 2026",t:"Twelve boreholes commissioned across Moroto district",e:"Phase two of our Karamoja community water programme brings clean water access to 18,000 residents."}];
+
 const tsts=[
  {q:"Documentation quality is the difference in this trade. Summit's export packs clear our compliance desk faster than any African counterparty we work with.",n:"BULLION DESK DIRECTOR · DUBAI, UAE"},
  {q:"Three years, forty-one shipments, zero assay disputes. That record speaks for itself.",n:"REFINERY PROCUREMENT LEAD · MUMBAI, INDIA"},
  {q:"Their formalisation programme changed how our cooperative works. Fair pricing, safe practice, and we can finally bank our income.",n:"MINING COOPERATIVE CHAIR · ITURI, DRC"}];
-const team=[
- ["Daniel K. Ssempa","Chief Executive Officer","Two decades across East African mineral trading and structured commodity finance. Leads Summit's regional strategy and government relations."],
- ["Marie-Claire Ilunga","Director of DRC Operations","Geologist and licensed mineral exporter with deep operational experience across Haut-Uélé and Ituri provinces."],
- ["Joseph Lokwang","Director, Karamoja Operations","Oversees exploration, community agreements, and artisanal-miner formalisation across the Karamoja sub-region."],
- ["Amara Osei","Head of Compliance & ESG","Former Big-Four assurance lead. Owns KYC, chain-of-custody auditing, and alignment with OECD and LBMA frameworks."],
- ["Henrik Larsen","Director of International Trade","Manages refinery partnerships and bullion-desk relationships across Dubai, Geneva, Mumbai, and Hong Kong."]];
+
 const downloads=[["Company Profile 2026","PDF · 4.2 MB"],["Corporate Presentation","PDF · 9.8 MB"],["Responsible Sourcing Policy","PDF · 1.1 MB"],["Product Specification Sheets","PDF · 2.6 MB"]];
 
+/* ═══════════ EMAILJS ═══════════ */
+const EJ_KEY='UM8cE83rvzhkii5wi';
+const EJ_SVC='service_3y7fp6d';
+const EJ_TPL='template_khnmdub';
+emailjs.init(EJ_KEY);
+
+function sendInvestorEnquiry(){
+  const wrap=document.getElementById('invform');
+  const btn=document.querySelector('#inv-form .btn-gold');
+  btn.textContent='Sending…';btn.disabled=true;
+  emailjs.sendForm(EJ_SVC,EJ_TPL,'#inv-form')
+    .then(()=>{wrap.innerHTML='<div style="text-align:center;padding:52px 0"><p class="disp goldtxt" style="font-size:28px;margin-bottom:10px">Message sent.</p><p class="soft">Our trade desk will reply within one business day.</p></div>';})
+    .catch(()=>{btn.textContent='Send enquiry';btn.disabled=false;alert('Something went wrong. Please email summitmineralholdings33@gmail.com');});
+}
+
+function sendContactMessage(){
+  const wrap=document.getElementById('cform');
+  const btn=document.querySelector('#contact-form .btn-gold');
+  btn.textContent='Sending…';btn.disabled=true;
+  emailjs.sendForm(EJ_SVC,EJ_TPL,'#contact-form')
+    .then(()=>{wrap.innerHTML='<div style="text-align:center;padding:52px 0"><p class="disp goldtxt" style="font-size:28px;margin-bottom:10px">Message sent.</p><p class="soft">Our trade desk will reply within one business day.</p></div>';})
+    .catch(()=>{btn.textContent='Send message';btn.disabled=false;alert('Something went wrong. Please email summitmineralholdings33@gmail.com');});
+}
+
+/* ═══════════ PRODUCTS GALLERY ═══════════ */
+const productImgs={
+  dore:"https://images.unsplash.com/photo-1762463176417-2c5e63767bd2",
+  nuggets:"https://images.unsplash.com/photo-1705073703601-eed67020c5ee",
+  refined:"https://images.unsplash.com/photo-1755728805826-771568904a6b",
+  minerals:"https://images.unsplash.com/photo-1521133573892-e44906baee46"
+};
+
+function renderDetail(p,i){
+  return `<div class="prod rev" style="margin-bottom:0;animation:fadeIn .35s ease">
+  <div class="gal">
+    <div class="gmain">
+      <img src="${productImgs[p.id]}?w=800&h=480&fit=crop&auto=format&q=80" alt="${p.name}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
+      <span class="tape" style="position:absolute;bottom:14px;left:18px;font-size:9px;background:rgba(6,16,30,.65);backdrop-filter:blur(6px);padding:4px 10px;border-radius:6px;color:var(--goldb);z-index:1">PHOTOGRAPHY · ${p.id.toUpperCase()}-01</span>
+    </div>
+    <div class="gthumbs">${["top","center","bottom"].map((crop,n)=>`<div><img src="${productImgs[p.id]}?w=300&h=200&fit=crop&crop=${crop}&auto=format&q=75" alt="${p.name} view ${n+2}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy"></div>`).join("")}</div>
+  </div>
+  <div class="glass spec" style="border-radius:26px;padding:36px;display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:22px;align-items:flex-start">
+      <div><p class="tape" style="color:var(--gold);font-size:9px">SPECIFICATION SHEET · SMH-00${i+1}</p><h2 class="disp" style="font-size:30px;margin-top:8px">${p.name}</h2></div>
+      <span class="disp goldtxt" style="font-size:20px;white-space:nowrap">${p.purity}</span>
+    </div>
+    <p class="soft" style="padding:22px 0;line-height:1.65">${p.desc}</p>
+    <dl>${p.specs.map(s=>`<div class="sr tape" style="font-size:10px"><dt class="soft">${s[0].toUpperCase()}</dt><dd>${s[1]}</dd></div>`).join("")}
+    <div class="sr tape" style="font-size:10px;border:none"><dt class="soft">EXPORT AVAILABILITY</dt><dd style="color:var(--goldb);text-align:right">${p.avail}</dd></div></dl>
+    <div style="margin-top:auto;padding-top:24px;display:flex;gap:12px;flex-wrap:wrap"><a href="#/contact" class="btn-gold btn-sm">Request allocation</a><a href="#" class="btn-ghost btn-sm">Download spec sheet ↓</a></div>
+  </div>
+</div>`;
+}
+
+function initProducts(){
+  const list=document.getElementById("prodlist");
+  if(!list)return;
+  list.innerHTML=`
+<div class="grid4" style="margin-bottom:36px" id="prodcards">
+${products.map((p,i)=>`<button class="prod-tab glass rev${i===0?" prod-tab-active":""}" data-idx="${i}" style="border:1px solid ${i===0?"var(--goldb)":"var(--gline)"}">
+  <div style="height:130px;border-radius:18px;margin-bottom:22px;overflow:hidden">
+    <img src="${productImgs[p.id]}?w=600&h=260&fit=crop&auto=format&q=80" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+  </div>
+  <p class="tape" style="color:var(--goldb);font-size:9px;margin-bottom:10px">SMH-00${i+1}</p>
+  <h3 class="disp" style="font-size:19px">${p.name}</h3>
+  <p class="tape" style="color:var(--gold);margin-top:8px;font-size:10px">${p.purity.toUpperCase()}</p>
+  <p class="soft" style="font-size:13.5px;margin-top:10px;line-height:1.6">${p.desc.split(".")[0]}.</p>
+  <p class="tape" style="color:var(--goldb);font-size:9px;margin-top:18px;letter-spacing:.1em">VIEW SPECS →</p>
+</button>`).join("\n")}
+</div>
+<div id="proddetail" style="margin-bottom:90px">${renderDetail(products[0],0)}</div>`;
+  document.getElementById("prodcards").addEventListener("click",e=>{
+    const btn=e.target.closest(".prod-tab");
+    if(!btn)return;
+    const idx=+btn.dataset.idx;
+    document.querySelectorAll(".prod-tab").forEach((b,i)=>{
+      b.style.borderColor=i===idx?"var(--goldb)":"var(--gline)";
+      b.classList.toggle("prod-tab-active",i===idx);
+    });
+    document.getElementById("proddetail").innerHTML=renderDetail(products[idx],idx);
+  });
+}
+
 /* ═══════════ HELPERS ═══════════ */
-const E=s=>s;
 const shead=(eb,t,b)=>`<div class="shead rev"><p class="eyebrow">${eb}</p><h2 class="disp">${t}</h2>${b?`<p class="soft">${b}</p>`:""}</div>`;
 const phero=(eb,t,b)=>`<section class="phero"><div class="wrap"><p class="eyebrow" style="margin-bottom:18px">${eb}</p><h1 class="disp">${t}</h1>${b?`<p class="lead soft">${b}</p>`:""}</div></section>`;
-const productImgs={
-  dore:"https://images.unsplash.com/photo-1762463176417-2c5e63767bd2?w=600&h=210&fit=crop&auto=format&q=80",
-  nuggets:"https://images.unsplash.com/photo-1705073703601-eed67020c5ee?w=600&h=210&fit=crop&auto=format&q=80",
-  refined:"https://images.unsplash.com/photo-1755728805826-771568904a6b?w=600&h=210&fit=crop&auto=format&q=80",
-  minerals:"https://images.unsplash.com/photo-1521133573892-e44906baee46?w=600&h=210&fit=crop&auto=format&q=80"
-};
-const prodCard=p=>`<a href="products.html#${p.id}" class="glass card rev" style="display:block"><div style="height:104px;border-radius:18px;margin-bottom:22px;overflow:hidden"><img src="${productImgs[p.id]}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy"></div><h3 class="disp" style="font-size:19px">${p.name}</h3><p class="tape" style="color:var(--gold);margin-top:8px;font-size:10px">${p.purity.toUpperCase()}</p><p class="soft" style="font-size:13.5px;margin-top:10px;line-height:1.6">${p.desc.split(".")[0]}.</p></a>`;
+const prodCard=p=>`<a href="#/products" class="glass card rev" style="display:block"><div style="height:104px;border-radius:18px;margin-bottom:22px;overflow:hidden"><img src="${productImgs[p.id]}?w=600&h=210&fit=crop&auto=format&q=80" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy"></div><h3 class="disp" style="font-size:19px">${p.name}</h3><p class="tape" style="color:var(--gold);margin-top:8px;font-size:10px">${p.purity.toUpperCase()}</p><p class="soft" style="font-size:13.5px;margin-top:10px;line-height:1.6">${p.desc.split(".")[0]}.</p></a>`;
 
 /* ═══════════ PAGES ═══════════ */
 const pages={};
@@ -360,7 +378,7 @@ pages.home=()=>`
     <p class="eyebrow" style="margin-bottom:22px;opacity:0;animation:fade .7s .2s forwards">Gold sourcing · Mining · Refining partnerships · Export</p>
     <h1 class="disp"><span style="animation-delay:.35s">Africa's</span><span style="animation-delay:.49s">Trusted</span><span class="goldtxt" style="animation-delay:.63s">Mineral Partner.</span></h1>
     <p class="sub">Responsible gold sourcing and mining operations across the Democratic Republic of Congo and Karamoja, Uganda - refined, certified, and exported to the world.</p>
-    <div class="cta"><a href="#/investors" class="btn-gold">Become a partner</a><a href="#/contact" class="btn-ghost ghost-lite">Request consultation</a></div>
+    <div class="cta"><a href="#/contact" class="btn-gold">Purchase Gold</a><a href="#/contact" class="btn-ghost ghost-lite">Request consultation</a></div>
   </div>
   <div class="coords tape" aria-hidden="true">SCROLL · 00°19'N 32°35'E</div>
 </section>
@@ -379,7 +397,7 @@ pages.home=()=>`
 <section class="blk"><div class="wrap">
   ${shead("What we trade","Assayed, certified, allocation-ready.","Four product lines, each shipped with a complete documentation pack: assay certificate, origin declaration, and export permits.")}
   <div class="grid4">${products.map(prodCard).join("")}</div>
-  <div style="text-align:center;margin-top:52px"><a href="products.html" class="btn-gold">Explore full product gallery &amp; specifications →</a></div>
+  <div style="text-align:center;margin-top:52px"><a href="#/products" class="btn-gold">Explore full product gallery &amp; specifications →</a></div>
 </div></section>
 <section class="blk"><div class="wrap"><div class="grid2" style="align-items:center;gap:50px">
   <div>${shead("Global trading reach","Kampala to the world's bullion desks.","Established export corridors into the major precious-metals hubs - Dubai, Geneva, Mumbai, Hong Kong and beyond - with refinery partners on three continents.")}
@@ -395,7 +413,7 @@ pages.home=()=>`
 </div></section>
 <section class="blk"><div class="wrap"><div class="ctabox rev">
   <p class="eyebrow">Trade desk</p><h2 class="disp">Ready to source from a counterparty you can audit?</h2>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px"><a href="#/investors" class="btn-gold">Become a partner</a><a href="#/contact" class="btn-ghost">Request consultation</a></div>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px"><a href="#/contact" class="btn-gold">Purchase Gold</a><a href="#/contact" class="btn-ghost">Request consultation</a></div>
 </div></div></section>`;
 
 pages.about=()=>`
@@ -410,9 +428,6 @@ ${phero("About us","Built on documentation, not promises.","Summit Mineral Holdi
 <section class="blk"><div class="wrap">${shead("Core values","What we won't trade away.")}
 <div class="grid2">${[["Integrity of origin","Every gram we trade is traceable to a documented source. Chain-of-custody is not a marketing line for us - it is the product."],["Discipline in compliance","We operate under OECD due-diligence guidance, LBMA responsible-sourcing principles, and ICGLR regional certification frameworks."],["Partnership over transaction","We build decade-long relationships with miners, refiners, and buyers. Trust compounds faster than margin."],["Communities first","Mining only earns its licence when the regions that host it become stronger - in income, health, and opportunity."]].map(v=>`<div class="rule rev"><h3 class="disp" style="font-size:22px">${v[0]}</h3><p class="soft" style="margin-top:10px;line-height:1.65">${v[1]}</p></div>`).join("")}</div>
 </div></section>
-<section class="blk"><div class="wrap">${shead("Leadership","The team behind the chain.")}
-<div class="grid3">${team.map(p=>`<div class="glass card rev"><div style="height:54px;width:54px;border-radius:99px;display:grid;place-items:center;margin-bottom:20px;background:linear-gradient(135deg,rgba(232,201,122,.35),rgba(154,122,46,.15))" class="disp">${p[0].split(" ").map(n=>n[0]).slice(0,2).join("")}</div><h3 class="disp" style="font-size:19px">${p[0]}</h3><p class="tape" style="color:var(--gold);font-size:9px;margin-top:5px">${p[1].toUpperCase()}</p><p class="soft" style="font-size:13.5px;margin-top:14px;line-height:1.65">${p[2]}</p></div>`).join("")}</div>
-</div></section>
 <section class="blk"><div class="wrap"><div class="grid2" style="gap:50px">
   <div>${shead("Corporate governance","Audited from boardroom to pit.")}
   ${[["Board oversight","An independent board committee reviews sourcing, sanctions screening, and counterparty risk quarterly."],["Third-party audit","Chain-of-custody audited annually by independent assessors against OECD Annex II risks."],["KYC & AML","Every counterparty passes documented KYC, beneficial-ownership checks, and sanctions screening before first trade."],["Whistleblower channel","A confidential, externally managed reporting line is open to employees, miners, and partners."]].map(g=>`<div class="rev" style="border-left:2px solid var(--gold);padding-left:22px;margin-bottom:26px"><h3 class="disp" style="font-size:19px">${g[0]}</h3><p class="soft" style="font-size:13.5px;margin-top:6px;line-height:1.65">${g[1]}</p></div>`).join("")}</div>
@@ -420,52 +435,32 @@ ${phero("About us","Built on documentation, not promises.","Summit Mineral Holdi
   <div class="glass card rev">${[["Zero assay disputes","across 40+ international shipments since 2022."],["One-day response","from our trade desk on allocation and pricing enquiries."],["Full export pack","assay, origin, permits, and insurance with every consignment."],["Audit-ready always","open books for verified counterparties and regulators."]].map(w=>`<div style="display:flex;gap:14px;margin-bottom:20px"><span style="color:var(--goldb)" aria-hidden="true">◆</span><p style="line-height:1.6"><strong>${w[0]}</strong> <span class="soft">${w[1]}</span></p></div>`).join("")}</div></div>
 </div></div></section>`;
 
-
 pages.products=()=>`
 ${phero("Products","Every lot ships with its paperwork.","Four product lines, each presented the way our buyers receive them - with a full assay-grade specification sheet.")}
-<div class="wrap">
-${products.map((p,i)=>`
-<article class="prod rev" id="${p.id}">
-  <div class="gal" style="${i%2?"order:2":""}">
-    <div class="gmain"><span class="disp goldtxt" style="font-size:66px;user-select:none">Au</span><span class="tape soft" style="position:absolute;bottom:14px;left:18px;font-size:9px">PHOTOGRAPHY · ${p.id.toUpperCase()}-01</span></div>
-    <div class="gthumbs">${[2,3,4].map(n=>`<div><span class="tape soft" style="font-size:8.5px">${p.id.toUpperCase()}-0${n}</span></div>`).join("")}</div>
-  </div>
-  <div class="glass spec" style="border-radius:26px;padding:36px;display:flex;flex-direction:column;${i%2?"order:1":""}">
-    <div style="display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:22px;align-items:flex-start">
-      <div><p class="tape" style="color:var(--gold);font-size:9px">SPECIFICATION SHEET · SMH-00${i+1}</p><h2 class="disp" style="font-size:30px;margin-top:8px">${p.name}</h2></div>
-      <span class="disp goldtxt" style="font-size:20px;white-space:nowrap">${p.purity}</span>
-    </div>
-    <p class="soft" style="padding:22px 0;line-height:1.65">${p.desc}</p>
-    <dl>${p.specs.map(s=>`<div class="sr tape" style="font-size:10px"><dt class="soft">${s[0].toUpperCase()}</dt><dd>${s[1]}</dd></div>`).join("")}
-    <div class="sr tape" style="font-size:10px;border:none"><dt class="soft">EXPORT AVAILABILITY</dt><dd style="color:var(--goldb);text-align:right">${p.avail}</dd></div></dl>
-    <div style="margin-top:auto;padding-top:24px;display:flex;gap:12px;flex-wrap:wrap"><a href="#/contact" class="btn-gold btn-sm">Request allocation</a><a href="#/investors" class="btn-ghost btn-sm">Download spec sheet ↓</a></div>
-  </div>
-</article>`).join("")}
-</div>`;
-
+<div class="wrap" id="prodlist"></div>`;
 
 pages.investors=()=>`
 ${phero("Investors & partners","Capital meets a chain it can audit.","Whether you buy, refine, finance, or regulate - there is a documented way to work with Summit.")}
 <div class="wrap">
 <div class="grid2" style="margin-bottom:90px">${[["Offtake partnerships","Forward allocation agreements on doré and refined gold for refineries and bullion desks, priced against LBMA benchmarks."],["Project investment","Structured participation in Karamoja exploration and processing expansion, with audited resource statements and clear exit terms."],["Refining partnerships","Toll-refining and co-branding arrangements with accredited refineries seeking documented African feedstock."],["Institutional & government","Formalisation programmes, export-corridor development, and revenue-transparency partnerships with public agencies."]].map((t,i)=>`<div class="glass card rev"><p class="tape" style="color:var(--gold);font-size:9px;margin-bottom:14px">TRACK 0${i+1}</p><h2 class="disp" style="font-size:23px">${t[0]}</h2><p class="soft" style="margin-top:10px;line-height:1.65">${t[1]}</p></div>`).join("")}</div>
-${shead("Download centre","Investor resources.","Corporate documents for counterparties conducting due diligence. Verified buyers can request audited financials through the buyer portal.")}
+${shead("Download centre","Investor resources.","Corporate documents for counterparties conducting due diligence.")}
 <div class="grid4" style="margin-bottom:90px">${downloads.map(d=>`<a href="#" onclick="alert('Connect this card to the real PDF in production.');return false" class="glass card rev" style="display:block"><span style="font-size:26px" aria-hidden="true">⬇</span><h3 class="disp" style="font-size:17px;margin-top:18px">${d[0]}</h3><p class="tape soft" style="font-size:9px;margin-top:8px">${d[1].toUpperCase()}</p></a>`).join("")}</div>
 <div class="grid2" style="gap:50px;align-items:start">
   <div>${shead("Partnership enquiry","Open a conversation.","Tell us who you are and what you're looking to do. Our trade desk responds within one business day; commercial detail follows KYC.")}</div>
   <div class="glass rev" style="border-radius:26px;padding:36px" id="invform">
-    <div class="frm">
+    <form class="frm" id="inv-form">
       <div class="two">
-        <label><span class="lbl tape" style="font-size:9px">FULL NAME</span><input placeholder="Jane Doe"></label>
-        <label><span class="lbl tape" style="font-size:9px">ORGANISATION</span><input placeholder="Company Ltd."></label>
+        <label><span class="lbl tape" style="font-size:9px">FULL NAME</span><input name="from_name" placeholder="Jane Doe" required></label>
+        <label><span class="lbl tape" style="font-size:9px">ORGANISATION</span><input name="organisation" placeholder="Company Ltd."></label>
       </div>
       <div class="two">
-        <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" placeholder="you@company.com"></label>
-        <label><span class="lbl tape" style="font-size:9px">PARTNERSHIP TRACK</span><select><option>Offtake partnerships</option><option>Project investment</option><option>Refining partnerships</option><option>Institutional & government</option></select></label>
+        <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" name="from_email" placeholder="you@company.com" required></label>
+        <label><span class="lbl tape" style="font-size:9px">PARTNERSHIP TRACK</span><select name="track"><option>Offtake partnerships</option><option>Project investment</option><option>Refining partnerships</option><option>Institutional &amp; government</option></select></label>
       </div>
-      <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea rows="5" placeholder="Volumes, timelines, and what you'd like to see from us."></textarea></label>
-      <button class="btn-gold" style="justify-self:start" onclick="formDone('invform')">Send enquiry</button>
-      <p class="tape soft" style="font-size:8px">SUBMISSIONS ROUTE TO summitmineralholdings33@gmail.com IN PRODUCTION.</p>
-    </div>
+      <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="5" placeholder="Volumes, timelines, and what you'd like to see from us." required></textarea></label>
+      <button class="btn-gold" style="justify-self:start" type="button" onclick="sendInvestorEnquiry()">Send enquiry</button>
+      <p class="tape soft" style="font-size:8px">SENDS TO summitmineralholdings33@gmail.com VIA EMAILJS.</p>
+    </form>
   </div>
 </div></div>`;
 
@@ -476,52 +471,37 @@ ${phero("Global reach","One hub, seventeen destinations.","Every route starts in
   <div>${shead("Strategic markets","Where Summit gold settles.")}
   <div class="rows">${[["Middle East","DUBAI · ISTANBUL","Primary doré corridor; DMCC-aligned counterparties and refinery offtake."],["Europe","GENEVA · LONDON","Refined gold and institutional buyers referencing LBMA settlement."],["South Asia","MUMBAI","High-volume refining demand; long-standing toll-refining relationships."],["East Asia","HONG KONG · SHANGHAI · SINGAPORE","Growing allocation demand from family offices and bullion dealers."]].map(m=>`<div class="row rev" style="grid-template-columns:1fr;gap:6px;padding:26px 30px"><div style="display:flex;justify-content:space-between;gap:14px;align-items:baseline;flex-wrap:wrap"><h3 class="disp" style="font-size:22px">${m[0]}</h3><span class="tape" style="color:var(--gold);font-size:9px">${m[1]}</span></div><p class="soft" style="font-size:13.5px;line-height:1.6">${m[2]}</p></div>`).join("")}</div></div>
 </div>
-<div class="glass rev" style="border-radius:26px;padding:36px;margin-top:80px">
-  <p class="eyebrow" style="margin-bottom:20px">Active export destinations</p>
-  <div style="display:flex;flex-wrap:wrap;gap:12px">${dests.map(d=>`<span class="pill tape" style="font-size:9px">KLA → ${d.c.toUpperCase()}</span>`).join("")}<span class="pill tape" style="font-size:9px;color:var(--goldb);border-color:var(--gold)">+ 9 FURTHER MARKETS ON REQUEST</span></div>
-</div></div>`;
-
+</div>`;
 
 pages.contact=()=>`
 ${phero("Contact","The desk answers in one business day.","Allocation enquiries, partnership conversations, site-visit requests - choose the channel that suits you.")}
 <div class="wrap"><div class="grid2" style="align-items:start;gap:36px">
   <div class="glass rev" style="border-radius:26px;padding:36px" id="cform">
-    <div class="frm">
+    <form class="frm" id="contact-form">
       <div class="two">
-        <label><span class="lbl tape" style="font-size:9px">NAME</span><input placeholder="Your name"></label>
-        <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" placeholder="you@company.com"></label>
+        <label><span class="lbl tape" style="font-size:9px">NAME</span><input name="from_name" placeholder="Your name" required></label>
+        <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" name="from_email" placeholder="you@company.com" required></label>
       </div>
-      <label><span class="lbl tape" style="font-size:9px">SUBJECT</span><input placeholder="Allocation enquiry - Gold doré"></label>
-      <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea rows="6" placeholder="How can we help?"></textarea></label>
+      <label><span class="lbl tape" style="font-size:9px">PRODUCT INTEREST</span><select name="subject"><option value="">Select a product...</option><option>Gold Doré Bars (85-96% Au)</option><option>Alluvial Gold Nuggets (88-94% Au)</option><option>Refined Gold (99.5-99.99% Au)</option><option>Precious Minerals - 3T Concentrates</option><option>General Enquiry</option></select></label>
+      <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="6" placeholder="How can we help?" required></textarea></label>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <button class="btn-gold" onclick="formDone('cform')">Send message</button>
+        <button class="btn-gold" type="button" onclick="sendContactMessage()">Send message</button>
         <a href="https://wa.me/256768653216?text=Hello%20Summit%20Mineral%20Holdings" target="_blank" rel="noopener" class="btn-ghost">WhatsApp the trade desk</a>
       </div>
-    </div>
+    </form>
   </div>
   <div>
-    ${[["Kampala - Head Office","Plot 14, Yusuf Lule Road, Nakasero, Kampala, Uganda","+256 700 000 000"],["Bunia - DRC Buying Centre","Avenue de l'Ituri, Bunia, DR Congo","+243 970 000 000"],["Moroto - Karamoja Operations","Independence Avenue, Moroto, Uganda","+256 770 000 000"]].map(o=>`<div class="rule rev" style="margin-bottom:24px"><h2 class="disp" style="font-size:19px">${o[0]}</h2><p class="soft" style="font-size:13.5px;margin-top:6px">${o[1]}</p><p class="tape" style="color:var(--gold);font-size:10px;margin-top:6px">${o[2]}</p></div>`).join("")}
+    <div class="rule rev" style="margin-bottom:24px"><h2 class="disp" style="font-size:19px">Kampala - Head Office</h2><p class="soft" style="font-size:13.5px;margin-top:6px">Plot 14, Yusuf Lule Road, Nakasero, Kampala, Uganda</p><p class="tape" style="color:var(--gold);font-size:10px;margin-top:6px">+256 783 133 541</p></div>
     <div class="rev" style="border-radius:26px;overflow:hidden;border:1px solid var(--line)">
       <iframe title="Kampala head office map" src="https://www.google.com/maps?q=Yusuf+Lule+Road,+Kampala,+Uganda&output=embed" style="width:100%;height:270px;border:none;filter:grayscale(35%) contrast(1.05)" loading="lazy"></iframe>
-    </div>
-    <div class="glass rev" style="border-radius:22px;padding:26px;margin-top:24px">
-      <p class="eyebrow" style="margin-bottom:12px">Direct lines</p>
-      <p class="soft" style="font-size:13.5px">General - <a style="color:var(--goldb)" href="mailto:summitmineralholdings33@gmail.com">summitmineralholdings33@gmail.com</a></p>
-      <p class="soft" style="font-size:13.5px;margin-top:6px">Compliance - <a style="color:var(--goldb)" href="mailto:summitmineralholdings33@gmail.com">summitmineralholdings33@gmail.com</a></p>
-      <p class="soft" style="font-size:13.5px;margin-top:6px">Media - <a style="color:var(--goldb)" href="mailto:summitmineralholdings33@gmail.com">summitmineralholdings33@gmail.com</a></p>
     </div>
   </div>
 </div></div>`;
 
-pages.portal=()=>`
-${phero("Buyer portal","Verification before allocation.","Verified clients submit enquiries, KYC documents, and allocation requests through this secure channel. Connect to your authentication backend and encrypted document store in production.")}
-<div class="wrap" style="max-width:720px">
-  <div class="glass rev" style="border-radius:26px;padding:42px" id="portalbox"></div>
-</div>`;
-
 /* ═══════════ ROUTER ═══════════ */
 const app=document.getElementById("app");
-const routes={"":"home","/":"home","/about":"about","/products":"products","/investors":"investors","/global":"global","/contact":"contact","/portal":"portal"};
+const routes={"":"home","/":"home","/about":"about","/products":"products","/investors":"investors","/global":"global","/contact":"contact"};
+
 function route(){
   const h=location.hash.replace(/^#/,"")||"/";
   const key=routes[h]||"home";
@@ -533,7 +513,7 @@ function route(){
   observeReveals();countersInit();
   if(key==="home"){tstInit();globeInit("globe","globelbl")}
   if(key==="global"){globeInit("globe2","globelbl2")}
-  if(key==="portal"){portalInit()}
+  if(key==="products"){initProducts()}
 }
 window.addEventListener("hashchange",route);
 
@@ -562,9 +542,9 @@ function renderTape(){
   document.getElementById("tape").innerHTML=[...quotes,...quotes].map(q=>`<span class="q"><span class="soft">${q[0]}</span><span>${q[1].toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2})}</span><span class="${q[2]>=0?"up":"dn"}">${q[2]>=0?"▲":"▼"} ${Math.abs(q[2]).toFixed(2)}%</span><span class="soft" style="opacity:.4">·</span></span>`).join("");
 }
 renderTape();
-setInterval(()=>{quotes.forEach(q=>{q[1]+= (Math.random()-.5)*.0008*q[1];q[2]+= (Math.random()-.5)*.02});renderTape()},4000);
+setInterval(()=>{quotes.forEach(q=>{q[1]+=(Math.random()-.5)*.0008*q[1];q[2]+=(Math.random()-.5)*.02});renderTape()},4000);
 
-/* ═══════════ NAV BEHAVIOUR ═══════════ */
+/* ═══════════ NAV ═══════════ */
 const nav=document.getElementById("nav");
 addEventListener("scroll",()=>nav.classList.toggle("scrolled",scrollY>24),{passive:true});
 const mega=document.getElementById("mega"),megabtn=document.getElementById("megabtn");
@@ -572,9 +552,6 @@ megabtn.addEventListener("click",()=>{mega.classList.toggle("open");megabtn.setA
 nav.addEventListener("mouseleave",()=>mega.classList.remove("open"));
 document.getElementById("burger").addEventListener("click",()=>document.getElementById("drawer").classList.add("open"));
 document.getElementById("closeDrawer").addEventListener("click",()=>document.getElementById("drawer").classList.remove("open"));
-document.getElementById("theme").addEventListener("click",function(){
-  const d=document.documentElement.classList.toggle("dark");this.textContent=d?"☀":"☾";
-});
 
 /* ═══════════ TESTIMONIALS ═══════════ */
 let ti=0,ttimer;
@@ -635,45 +612,10 @@ function globeInit(id,lblId){
   raf=requestAnimationFrame(draw);
 }
 
-
-/* ═══════════ PORTAL ═══════════ */
-const pSteps=["ACCOUNT","COMPANY KYC","DOCUMENTS","REVIEW"];
-let pStep=0;
-function portalRender(){
-  const box=document.getElementById("portalbox");
-  const bodies=[
-    `<label><span class="lbl tape" style="font-size:9px">WORK EMAIL</span><input type="email" placeholder="you@company.com"></label>
-     <label><span class="lbl tape" style="font-size:9px">CREATE PASSWORD</span><input type="password" placeholder="••••••••••"></label>`,
-    `<label><span class="lbl tape" style="font-size:9px">REGISTERED COMPANY NAME</span><input placeholder="Company Ltd."></label>
-     <div class="two"><label><span class="lbl tape" style="font-size:9px">REGISTRATION NO.</span><input placeholder="-"></label>
-     <label><span class="lbl tape" style="font-size:9px">JURISDICTION</span><input placeholder="e.g. UAE"></label></div>
-     <label><span class="lbl tape" style="font-size:9px">BENEFICIAL OWNERS (25%+)</span><textarea rows="3" placeholder="Full legal names"></textarea></label>`,
-    ["Certificate of incorporation","Trade licence","Director / UBO identification","Proof of address"].map(d=>`<div class="upl"><span>${d}</span><span class="tape" style="color:var(--gold);font-size:9px">UPLOAD PDF ↑</span></div>`).join("")+`<p class="tape soft" style="font-size:8px">DOCUMENTS ARE TRANSMITTED OVER TLS AND STORED ENCRYPTED. CONNECT TO YOUR DOCUMENT VAULT IN PRODUCTION.</p>`,
-    `<p class="soft" style="line-height:1.7">By submitting, you confirm the information provided is accurate and authorise Summit Mineral Holdings to conduct sanctions screening and beneficial-ownership verification as required under our compliance programme.</p>`
-  ];
-  box.innerHTML=`
-    <ol class="stepper" aria-label="KYC progress">${pSteps.map((s,i)=>`<li style="display:contents"><span class="s${i<=pStep?" on":""}">${i+1}</span>${i<3?'<span class="ln"></span>':""}</li>`).join("")}</ol>
-    <p class="eyebrow" style="margin-bottom:22px">STEP ${pStep+1} OF 4 - ${pSteps[pStep]}</p>
-    <div class="frm">${bodies[pStep]}</div>
-    <div style="display:flex;justify-content:space-between;margin-top:30px">
-      <button class="btn-ghost btn-sm" ${pStep===0?'style="opacity:.4" disabled':""} id="pback">Back</button>
-      <button class="btn-gold btn-sm" id="pnext">${pStep<3?"Continue":"Submit for verification"}</button>
-    </div>`;
-  document.getElementById("pback").onclick=()=>{if(pStep>0){pStep--;portalRender()}};
-  document.getElementById("pnext").onclick=()=>{
-    if(pStep<3){pStep++;portalRender()}
-    else box.innerHTML=`<div style="text-align:center;padding:46px 0"><p class="disp goldtxt" style="font-size:28px;margin-bottom:12px">Submission received.</p><p class="soft" style="max-width:420px;margin:0 auto;line-height:1.7">Our compliance team reviews KYC packs within three business days. You'll receive portal credentials by email once verification is complete.</p></div>`;
-  };
-}
-function portalInit(){pStep=0;portalRender()}
-
-/* ═══════════ FORMS ═══════════ */
-function formDone(id){
-  document.getElementById(id).innerHTML=`<div style="text-align:center;padding:52px 0"><p class="disp goldtxt" style="font-size:28px;margin-bottom:10px">Message sent.</p><p class="soft">Our trade desk will reply within one business day.</p></div>`;
-}
-
-route();
+window.addEventListener("load",route);
 </script>
+
+<!-- WhatsApp float button -->
 <a href="https://wa.me/256768653216" class="wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 </body>
 </html>
