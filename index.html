@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="icon" href="favicon.png" type="image/png">
+<link rel="icon" href="summitlogo.png" type="image/png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Summit Mineral Holdings - Africa's Trusted Mineral Partner</title>
 <meta name="description" content="Responsible gold sourcing and mining operations across DR Congo and Karamoja, Uganda - refined, certified, and exported to the world.">
@@ -181,7 +181,7 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
 <header id="nav">
   <div class="wrap bar">
     <a href="#/" class="logo">
-      <img src="logo.png" alt="Summit Mineral Holdings" style="height:70px;width:auto;display:block">
+      <img src="summitlogo.png" alt="Summit Mineral Holdings" style="height:70px;width:auto;display:block">
       <span style="line-height:1.15"><span class="disp" style="font-size:14px;display:block">Summit Mineral</span><span class="tape soft" style="font-size:8.5px">HOLDINGS LTD · EST. KAMPALA</span></span>
     </a>
     <nav class="links" aria-label="Primary">
@@ -351,7 +351,17 @@ ${products.map((p,i)=>`<button class="prod-tab glass rev${i===0?" prod-tab-activ
   <p class="tape" style="color:var(--goldb);font-size:9px;margin-top:18px;letter-spacing:.1em">VIEW SPECS →</p>
 </button>`).join("\n")}
 </div>
-<div id="proddetail" style="margin-bottom:90px">${renderDetail(products[0],0)}</div>`;
+<div id="proddetail" style="margin-bottom:60px">${renderDetail(products[0],0)}</div>
+<div class="ctabox rev" style="margin-bottom:90px">
+  <p class="eyebrow">Ready to trade?</p>
+  <h2 class="disp">Every lot ships with a complete documentation pack.</h2>
+  <p class="soft" style="max-width:560px;margin:14px auto 0;line-height:1.65">Assay certificate, origin declaration, export permits, and insurance - included with every consignment. Reach out to our trade desk for current allocation and pricing.</p>
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px">
+    <a href="#/contact" class="btn-gold">Request allocation</a>
+    <a href="#/investors" class="btn-ghost">Become a partner</a>
+  </div>
+</div>`;
+  observeReveals();
   document.getElementById("prodcards").addEventListener("click",e=>{
     const btn=e.target.closest(".prod-tab");
     if(!btn)return;
@@ -361,6 +371,7 @@ ${products.map((p,i)=>`<button class="prod-tab glass rev${i===0?" prod-tab-activ
       b.classList.toggle("prod-tab-active",i===idx);
     });
     document.getElementById("proddetail").innerHTML=renderDetail(products[idx],idx);
+    observeReveals();
   });
 }
 
@@ -437,7 +448,10 @@ ${phero("About us","Built on documentation, not promises.","Summit Mineral Holdi
 
 pages.products=()=>`
 ${phero("Products","Every lot ships with its paperwork.","Four product lines, each presented the way our buyers receive them - with a full assay-grade specification sheet.")}
-<div class="wrap" id="prodlist"></div>`;
+<div class="wrap">
+  <div class="shead rev"><p class="eyebrow">Product catalogue</p><h2 class="disp">Select a product to view full specifications.</h2></div>
+  <div id="prodlist"></div>
+</div>`;
 
 pages.investors=()=>`
 ${phero("Investors & partners","Capital meets a chain it can audit.","Whether you buy, refine, finance, or regulate - there is a documented way to work with Summit.")}
