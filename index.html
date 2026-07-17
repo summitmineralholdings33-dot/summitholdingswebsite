@@ -246,8 +246,8 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
     </ul></div>
     <div><p class="eyebrow" style="margin-bottom:18px">Contact</p><ul class="soft">
       <li>Plot 14, Yusuf Lule Road, Nakasero, Kampala, Uganda</li>
-      <li><a href="tel:+256783133541">+256 783 133 541</a></li>
-      <li><a href="mailto:summitmineralholdings33@gmail.com">summitmineralholdings33@gmail.com</a></li>
+      <li><a href="tel:+256768653216">+256 768 653 216</a></li>
+      <li><a href="mailto:summitmineralholding@gmail.com">summitmineralholding@gmail.com</a></li>
       <li><a href="https://wa.me/256768653216" target="_blank" rel="noopener">WhatsApp trade desk →</a></li>
     </ul></div>
   </div>
@@ -293,7 +293,7 @@ function sendInvestorEnquiry(){
   btn.textContent='Sending…';btn.disabled=true;
   emailjs.sendForm(EJ_SVC,EJ_TPL,'#inv-form')
     .then(()=>{wrap.innerHTML='<div style="text-align:center;padding:52px 0"><p class="disp goldtxt" style="font-size:28px;margin-bottom:10px">Message sent.</p><p class="soft">Our trade desk will reply within one business day.</p></div>';})
-    .catch(()=>{btn.textContent='Send enquiry';btn.disabled=false;alert('Something went wrong. Please email summitmineralholdings33@gmail.com');});
+    .catch(()=>{btn.textContent='Send enquiry';btn.disabled=false;alert('Something went wrong. Please email summitmineralholding@gmail.com');});
 }
 
 function sendContactMessage(){
@@ -312,7 +312,7 @@ function sendContactMessage(){
   btn.textContent='Sending…';btn.disabled=true;
   emailjs.sendForm(EJ_SVC,EJ_TPL,'#contact-form')
     .then(()=>{wrap.innerHTML='<div style="text-align:center;padding:52px 0"><p class="disp goldtxt" style="font-size:28px;margin-bottom:10px">Message sent.</p><p class="soft">Our trade desk will reply within one business day.</p></div>';})
-    .catch(()=>{btn.textContent='Send message';btn.disabled=false;alert('Something went wrong. Please email summitmineralholdings33@gmail.com');});
+    .catch(()=>{btn.textContent='Send message';btn.disabled=false;alert('Something went wrong. Please email summitmineralholding@gmail.com');});
 }
 
 /* ═══════════ PRODUCTS GALLERY ═══════════ */
@@ -483,7 +483,7 @@ ${shead("Download centre","Investor resources.","Corporate documents for counter
       </div>
       <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="5" placeholder="Volumes, timelines, and what you'd like to see from us." required></textarea></label>
       <button class="btn-gold" style="justify-self:start" type="button" onclick="sendInvestorEnquiry()">Send enquiry</button>
-      <p class="tape soft" style="font-size:8px">SENDS TO summitmineralholdings33@gmail.com VIA EMAILJS.</p>
+      <p class="tape soft" style="font-size:8px">SENDS TO summitmineralholding@gmail.com VIA EMAILJS.</p>
     </form>
   </div>
 </div></div>`;
