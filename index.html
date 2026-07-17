@@ -254,9 +254,7 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
   <div class="base tape soft" style="font-size:9px"><span>© 2016-2026 SUMMIT MINERAL HOLDINGS LTD. ALL RIGHTS RESERVED.</span><span>KAMPALA · ISIRO · BUNIA · MOROTO</span></div>
 </div></footer>
 
-<!-- EmailJS CDN (third-party library) -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
+<script src="js/mail.js"></script>
 <script>
 /* ═══════════ DATA ═══════════ */
 const products=[
@@ -280,40 +278,6 @@ const tsts=[
  {q:"Their formalisation programme changed how our cooperative works. Fair pricing, safe practice, and we can finally bank our income.",n:"MINING COOPERATIVE CHAIR · ITURI, DRC"}];
 
 const downloads=[["Company Profile 2026","PDF · 4.2 MB"],["Corporate Presentation","PDF · 9.8 MB"],["Responsible Sourcing Policy","PDF · 1.1 MB"],["Product Specification Sheets","PDF · 2.6 MB"]];
-
-/* ═══════════ EMAILJS ═══════════ */
-const EJ_KEY='UM8cE83rvzhkii5wi';
-const EJ_SVC='service_3y7fp6d';
-const EJ_TPL='template_khnmdub';
-emailjs.init(EJ_KEY);
-
-function sendInvestorEnquiry(){
-  const wrap=document.getElementById('invform');
-  const btn=document.querySelector('#inv-form .btn-gold');
-  btn.textContent='Sending…';btn.disabled=true;
-  emailjs.sendForm(EJ_SVC,EJ_TPL,'#inv-form')
-    .then(()=>{wrap.innerHTML='<div style="text-align:center;padding:52px 0"><p class="disp goldtxt" style="font-size:28px;margin-bottom:10px">Message sent.</p><p class="soft">Our trade desk will reply within one business day.</p></div>';})
-    .catch(()=>{btn.textContent='Send enquiry';btn.disabled=false;alert('Something went wrong. Please email summitmineralholding@gmail.com');});
-}
-
-function sendContactMessage(){
-  const form=document.getElementById('contact-form');
-  if(!form.reportValidity()) return;
-  const wrap=document.getElementById('cform');
-  const btn=document.querySelector('#contact-form .btn-gold');
-  const data=new FormData(form);
-  const name=encodeURIComponent(data.get('from_name')||'');
-  const email=encodeURIComponent(data.get('from_email')||'');
-  const phone=encodeURIComponent(data.get('phone')||'');
-  const subject=encodeURIComponent(data.get('subject')||'');
-  const message=encodeURIComponent(data.get('message')||'');
-  const text=`Hello Summit Mineral Holdings%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AProduct interest: ${subject}%0AMessage: ${message}`;
-  window.open(`https://wa.me/256768653216?text=${text}`, '_blank');
-  btn.textContent='Sending…';btn.disabled=true;
-  emailjs.sendForm(EJ_SVC,EJ_TPL,'#contact-form')
-    .then(()=>{wrap.innerHTML='<div style="text-align:center;padding:52px 0"><p class="disp goldtxt" style="font-size:28px;margin-bottom:10px">Message sent.</p><p class="soft">Our trade desk will reply within one business day.</p></div>';})
-    .catch(()=>{btn.textContent='Send message';btn.disabled=false;alert('Something went wrong. Please email summitmineralholding@gmail.com');});
-}
 
 /* ═══════════ PRODUCTS GALLERY ═══════════ */
 const productImgs={
@@ -472,18 +436,36 @@ ${shead("Download centre","Investor resources.","Corporate documents for counter
 <div class="grid2" style="gap:50px;align-items:start">
   <div>${shead("Partnership enquiry","Open a conversation.","Tell us who you are and what you're looking to do. Our trade desk responds within one business day; commercial detail follows KYC.")}</div>
   <div class="glass rev" style="border-radius:26px;padding:36px" id="invform">
-    <form class="frm" id="inv-form">
+    <form class="frm" id="inv-form" onsubmit="event.preventDefault(); sendInvestorEnquiry();">
       <div class="two">
         <label><span class="lbl tape" style="font-size:9px">FULL NAME</span><input name="from_name" placeholder="Jane Doe" required></label>
-        <label><span class="lbl tape" style="font-size:9px">ORGANISATION</span><input name="organisation" placeholder="Company Ltd."></label>
+        <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" name="from_email" placeholder="you@company.com" required></label>
+      </div>
+      <div class="two">
+        <label><span class="lbl tape" style="font-size:9px">PHONE</span><input type="tel" name="phone" placeholder="+256 7xx xxx xxx"></label>
+        <label><span class="lbl tape" style="font-size:9px">PARTNERSHIP TRACK</span><select name="track"><option>Offtake partnerships</option><option>Project investment</option><option>Refining partnerships</option><option>Institutional &amp; government</option></select></label>
+      </div>
+      <div class="two">
+        <label><span class="lbl tape" style="font-size:9px">VOLUME RANGE</span><select name="volume"><option>1-10 kg</option><option>10-100 kg</option><option>100kg-1 tonne</option><option>1+ tonne</option></select></label>
+        <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="5" placeholder="Volumes, timelines, and what you'd like to see from us." required></textarea></label>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <button class="btn-gold" style="justify-self:start" type="submit">Send enquiry</button>
+        <p class="tape soft" style="font-size:8px">RESPONDS WITHIN ONE BUSINESS DAY</p>
       </div>
       <div class="two">
         <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" name="from_email" placeholder="you@company.com" required></label>
         <label><span class="lbl tape" style="font-size:9px">PARTNERSHIP TRACK</span><select name="track"><option>Offtake partnerships</option><option>Project investment</option><option>Refining partnerships</option><option>Institutional &amp; government</option></select></label>
       </div>
+      <div class="two">
+        <label><span class="lbl tape" style="font-size:9px">PHONE</span><input type="tel" name="phone" placeholder="+256 7xx xxx xxx"></label>
+        <label><span class="lbl tape" style="font-size:9px">VOLUME RANGE</span><select name="volume"><option>1-10 kg</option><option>10-100 kg</option><option>100kg-1 tonne</option><option>1+ tonne</option></select></label>
+      </div>
       <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="5" placeholder="Volumes, timelines, and what you'd like to see from us." required></textarea></label>
-      <button class="btn-gold" style="justify-self:start" type="button" onclick="sendInvestorEnquiry()">Send enquiry</button>
-      <p class="tape soft" style="font-size:8px">SENDS TO summitmineralholding@gmail.com VIA EMAILJS.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <button class="btn-gold" style="justify-self:start" type="submit">Send enquiry</button>
+        <p class="tape soft" style="font-size:8px">RESPONDS WITHIN ONE BUSINESS DAY</p>
+      </div>
     </form>
   </div>
 </div></div>`;
@@ -501,18 +483,19 @@ pages.contact=()=>`
 ${phero("Contact","The desk answers in one business day.","Allocation enquiries, partnership conversations, site-visit requests - choose the channel that suits you.")}
 <div class="wrap"><div class="grid2" style="align-items:start;gap:36px">
   <div class="glass rev" style="border-radius:26px;padding:36px" id="cform">
-    <form class="frm" id="contact-form">
+    <form class="frm" id="contact-form" onsubmit="event.preventDefault(); sendContactMessage();">
       <div class="two">
-        <label><span class="lbl tape" style="font-size:9px">NAME</span><input name="from_name" placeholder="Your name" required></label>
+        <label><span class="lbl tape" style="font-size:9px">FULL NAME</span><input name="from_name" placeholder="Your name" required></label>
         <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" name="from_email" placeholder="you@company.com" required></label>
       </div>
       <div class="two">
         <label><span class="lbl tape" style="font-size:9px">MOBILE NUMBER</span><input type="tel" name="phone" placeholder="+256 7xx xxx xxx" required></label>
         <label><span class="lbl tape" style="font-size:9px">PRODUCT INTEREST</span><select name="subject"><option value="">Select a product...</option><option>Gold Doré Bars (85-96% Au)</option><option>Alluvial Gold Nuggets (88-94% Au)</option><option>Refined Gold (99.5-99.99% Au)</option><option>Precious Minerals - 3T Concentrates</option><option>General Enquiry</option></select></label>
       </div>
-      <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="6" placeholder="How can we help?" required></textarea></label>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <button class="btn-gold" type="button" onclick="sendContactMessage()">Send message</button>
+      <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="6" placeholder="Tell us what you're looking to source, when you need it, and any compliance details." required></textarea></label>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <button class="btn-gold" type="submit">Send message</button>
+        <p class="tape soft" style="font-size:8px">YOUR REQUEST GOES DIRECTLY TO THE TRADE DESK</p>
       </div>
     </form>
   </div>
