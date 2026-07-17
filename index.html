@@ -254,7 +254,6 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
   <div class="base tape soft" style="font-size:9px"><span>© 2016-2026 SUMMIT MINERAL HOLDINGS LTD. ALL RIGHTS RESERVED.</span><span>KAMPALA · ISIRO · BUNIA · MOROTO</span></div>
 </div></footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/mail.js"></script>
 <script>
 /* ═══════════ DATA ═══════════ */
@@ -437,7 +436,7 @@ ${shead("Download centre","Investor resources.","Corporate documents for counter
 <div class="grid2" style="gap:50px;align-items:start">
   <div>${shead("Partnership enquiry","Open a conversation.","Tell us who you are and what you're looking to do. Our trade desk responds within one business day; commercial detail follows KYC.")}</div>
   <div class="glass rev" style="border-radius:26px;padding:36px" id="invform">
-    <form class="frm" id="inv-form" onsubmit="event.preventDefault(); sendInvestorEnquiry();">
+    <form class="frm" id="inv-form">
       <div class="two">
         <label><span class="lbl tape" style="font-size:9px">FULL NAME</span><input name="from_name" placeholder="Jane Doe" required></label>
         <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" name="from_email" placeholder="you@company.com" required></label>
@@ -471,7 +470,7 @@ pages.contact=()=>`
 ${phero("Contact","The desk answers in one business day.","Allocation enquiries, partnership conversations, site-visit requests - choose the channel that suits you.")}
 <div class="wrap"><div class="grid2" style="align-items:start;gap:36px">
   <div class="glass rev" style="border-radius:26px;padding:36px" id="cform">
-    <form class="frm" id="contact-form" onsubmit="event.preventDefault(); sendContactMessage();">
+    <form class="frm" id="contact-form">
       <div class="two">
         <label><span class="lbl tape" style="font-size:9px">FULL NAME</span><input name="from_name" placeholder="Your name" required></label>
         <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" name="from_email" placeholder="you@company.com" required></label>
@@ -508,6 +507,7 @@ function route(){
   document.getElementById("drawer").classList.remove("open");
   document.getElementById("mega").classList.remove("open");
   observeReveals();countersInit();
+  attachFormHandlers();
   if(key==="home"){tstInit();globeInit("globe","globelbl")}
   if(key==="global"){globeInit("globe2","globelbl2")}
   if(key==="products"){initProducts()}
