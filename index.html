@@ -254,6 +254,7 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
   <div class="base tape soft" style="font-size:9px"><span>© 2016-2026 SUMMIT MINERAL HOLDINGS LTD. ALL RIGHTS RESERVED.</span><span>KAMPALA · ISIRO · BUNIA · MOROTO</span></div>
 </div></footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/mail.js"></script>
 <script>
 /* ═══════════ DATA ═══════════ */
@@ -442,12 +443,12 @@ ${shead("Download centre","Investor resources.","Corporate documents for counter
         <label><span class="lbl tape" style="font-size:9px">EMAIL</span><input type="email" name="from_email" placeholder="you@company.com" required></label>
       </div>
       <div class="two">
-        <label><span class="lbl tape" style="font-size:9px">PHONE</span><input type="tel" name="phone" placeholder="+256 7xx xxx xxx"></label>
-        <label><span class="lbl tape" style="font-size:9px">PARTNERSHIP TRACK</span><select name="track"><option>Offtake partnerships</option><option>Project investment</option><option>Refining partnerships</option><option>Institutional &amp; government</option></select></label>
+        <label><span class="lbl tape" style="font-size:9px">PHONE</span><input type="tel" name="phone" placeholder="+256 7xx xxx xxx" required></label>
+        <label><span class="lbl tape" style="font-size:9px">PARTNERSHIP TRACK</span><select name="track" required><option value="">Select a track...</option><option>Offtake partnerships</option><option>Project investment</option><option>Refining partnerships</option><option>Institutional &amp; government</option></select></label>
       </div>
       <div class="two">
-        <label><span class="lbl tape" style="font-size:9px">VOLUME RANGE</span><select name="volume"><option>1-10 kg</option><option>10-100 kg</option><option>100kg-1 tonne</option><option>1+ tonne</option></select></label>
-        <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="5" placeholder="Volumes, timelines, and what you'd like to see from us." required></textarea></label>
+        <label><span class="lbl tape" style="font-size:9px">VOLUME RANGE</span><select name="volume" required><option value="">Select a volume range...</option><option>1-10 kg</option><option>10-100 kg</option><option>100kg-1 tonne</option><option>1+ tonne</option></select></label>
+        <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="5" placeholder="Volumes, timelines, and what you'd like to see from us."></textarea></label>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
         <button class="btn-gold" style="justify-self:start" type="submit">Send enquiry</button>
@@ -477,9 +478,9 @@ ${phero("Contact","The desk answers in one business day.","Allocation enquiries,
       </div>
       <div class="two">
         <label><span class="lbl tape" style="font-size:9px">MOBILE NUMBER</span><input type="tel" name="phone" placeholder="+256 7xx xxx xxx" required></label>
-        <label><span class="lbl tape" style="font-size:9px">PRODUCT INTEREST</span><select name="subject"><option value="">Select a product...</option><option>Gold Doré Bars (85-96% Au)</option><option>Alluvial Gold Nuggets (88-94% Au)</option><option>Refined Gold (99.5-99.99% Au)</option><option>Precious Minerals - 3T Concentrates</option><option>General Enquiry</option></select></label>
+        <label><span class="lbl tape" style="font-size:9px">PRODUCT INTEREST</span><select name="subject" required><option value="">Select a product...</option><option>Gold Doré Bars (85-96% Au)</option><option>Alluvial Gold Nuggets (88-94% Au)</option><option>Refined Gold (99.5-99.99% Au)</option><option>Precious Minerals - 3T Concentrates</option><option>General Enquiry</option></select></label>
       </div>
-      <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="6" placeholder="Tell us what you're looking to source, when you need it, and any compliance details." required></textarea></label>
+      <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="6" placeholder="Tell us what you're looking to source, when you need it, and any compliance details."></textarea></label>
       <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
         <button class="btn-gold" type="submit">Send message</button>
         <p class="tape soft" style="font-size:8px">YOUR REQUEST GOES DIRECTLY TO THE TRADE DESK</p>
