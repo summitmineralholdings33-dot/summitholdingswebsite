@@ -144,6 +144,7 @@ label{display:block}
 label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
 .frm{display:grid;gap:18px}
 .frm .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-msg{margin-top:14px;font-size:11px;line-height:1.6}
 /* globe */
 #globe,#globe2{width:100%;max-width:520px;aspect-ratio:1;cursor:grab;touch-action:none;display:block;margin:0 auto}
 /* footer */
@@ -254,7 +255,6 @@ label .lbl{display:block;margin-bottom:8px;color:var(--soft)}
   <div class="base tape soft" style="font-size:9px"><span>© 2016-2026 SUMMIT MINERAL HOLDINGS LTD. ALL RIGHTS RESERVED.</span><span>KAMPALA · ISIRO · BUNIA · MOROTO</span></div>
 </div></footer>
 
-<script src="js/mail.js"></script>
 <script>
 /* ═══════════ DATA ═══════════ */
 const products=[
@@ -451,7 +451,7 @@ ${shead("Download centre","Investor resources.","Corporate documents for counter
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
         <button class="btn-gold" style="justify-self:start" type="submit">Send enquiry</button>
-        <p class="tape soft" style="font-size:8px">RESPONDS WITHIN ONE BUSINESS DAY</p>
+        <p class="tape soft" style="font-size:8px">OPENS YOUR EMAIL APP · RESPONDS WITHIN ONE BUSINESS DAY</p>
       </div>
     </form>
   </div>
@@ -482,7 +482,7 @@ ${phero("Contact","The desk answers in one business day.","Allocation enquiries,
       <label><span class="lbl tape" style="font-size:9px">MESSAGE</span><textarea name="message" rows="6" placeholder="Tell us what you're looking to source, when you need it, and any compliance details."></textarea></label>
       <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
         <button class="btn-gold" type="submit">Send message</button>
-        <p class="tape soft" style="font-size:8px">YOUR REQUEST GOES DIRECTLY TO THE TRADE DESK</p>
+        <p class="tape soft" style="font-size:8px">OPENS YOUR EMAIL APP WITH THE MESSAGE READY</p>
       </div>
     </form>
   </div>
@@ -493,6 +493,85 @@ ${phero("Contact","The desk answers in one business day.","Allocation enquiries,
     </div>
   </div>
 </div></div>`;
+
+/* ═══════════ FORM HANDLING (mailto-based, no EmailJS) ═══════════ */
+const DEST_EMAIL="summitmineralholding@gmail.com";
+
+function showFormMsg(form,text,isError){
+  let msg=form.querySelector(".form-msg");
+  if(!msg){
+    msg=document.createElement("p");
+    msg.className="form-msg tape";
+    form.appendChild(msg);
+  }
+  msg.textContent=text;
+  msg.style.color=isError?"#f87171":"#34d399";
+}
+
+function buildMailto(to,subject,lines){
+  const body=lines.filter(l=>l!==null&&l!==undefined).join("\n");
+  return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function attachFormHandlers(){
+  const cform=document.getElementById("contact-form");
+  if(cform){
+    cform.addEventListener("submit",e=>{
+      e.preventDefault();
+      const fd=new FormData(cform);
+      const name=(fd.get("from_name")||"").toString().trim();
+      const email=(fd.get("from_email")||"").toString().trim();
+      const phone=(fd.get("phone")||"").toString().trim();
+      const subject=(fd.get("subject")||"").toString().trim();
+      const message=(fd.get("message")||"").toString().trim();
+      if(!name||!email){
+        showFormMsg(cform,"Please fill in your name and email address first.",true);
+        return;
+      }
+      const mailto=buildMailto(DEST_EMAIL,`New Enquiry from ${name}`,[
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Phone: ${phone}`,
+        `Product Interest: ${subject}`,
+        "",
+        "Message:",
+        message
+      ]);
+      window.location.href=mailto;
+      showFormMsg(cform,"Your email app has opened with the message ready. Just click Send in your email app.",false);
+    });
+  }
+
+  const iform=document.getElementById("inv-form");
+  if(iform){
+    iform.addEventListener("submit",e=>{
+      e.preventDefault();
+      const fd=new FormData(iform);
+      const name=(fd.get("from_name")||"").toString().trim();
+      const email=(fd.get("from_email")||"").toString().trim();
+      const phone=(fd.get("phone")||"").toString().trim();
+      const track=(fd.get("track")||"").toString().trim();
+      const volume=(fd.get("volume")||"").toString().trim();
+      const message=(fd.get("message")||"").toString().trim();
+      if(!name||!email){
+        showFormMsg(iform,"Please fill in your name and email address first.",true);
+        return;
+      }
+      const mailto=buildMailto(DEST_EMAIL,`Partnership Enquiry from ${name}`,[
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Phone: ${phone}`,
+        `Partnership Track: ${track}`,
+        `Volume Range: ${volume}`,
+        "",
+        "Message:",
+        message
+      ]);
+      window.location.href=mailto;
+      showFormMsg(iform,"Your email app has opened with the message ready. Just click Send in your email app.",false);
+    });
+  }
+}
 
 /* ═══════════ ROUTER ═══════════ */
 const app=document.getElementById("app");
